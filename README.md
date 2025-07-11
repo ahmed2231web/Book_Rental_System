@@ -44,7 +44,7 @@ A complete Django REST API for managing book rentals with user authentication, b
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/ahmed2231web/Book_Rental_System.git
 cd "Book Rental System"
 
 # Create virtual environment
@@ -76,20 +76,7 @@ DATABASE_PORT=5432
 # USE_POSTGRESQL=false
 ```
 
-### 3. Database Setup
-
-```bash
-# Run migrations
-python manage.py migrate
-
-# Create sample data (optional)
-python manage.py populate_data
-
-# Create superuser (optional)
-python manage.py createsuperuser
-```
-
-### 4. Run the Server
+### 3. Run the Server
 
 ```bash
 python manage.py runserver
@@ -106,11 +93,6 @@ The API will be available at `http://localhost:8000/`
 ## 🔑 Authentication
 
 The API uses JWT (JSON Web Tokens) for authentication. All endpoints except registration and login require authentication.
-
-### Sample Users (after running populate_data)
-
-- **Admin**: `admin@bookrental.com` / `admin123`
-- **Users**: `user1@example.com` to `user5@example.com` / `password123`
 
 ## 📖 API Endpoints
 
@@ -363,12 +345,4 @@ For production deployment:
 5. Set up proper CORS headers if needed
 6. Use a production WSGI server (gunicorn, uwsgi)
 
-## 📄 License
-
-This project is for educational purposes.
-
 ---
-
-**Happy coding! 🎉**
-
-For questions or issues, please refer to the API documentation at `/api/docs/` when the server is running. 
