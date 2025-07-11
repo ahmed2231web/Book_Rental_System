@@ -38,6 +38,28 @@ A complete Django REST API for managing book rentals with user authentication, b
 - PostgreSQL (for production) or SQLite (for development)
 - All dependencies listed in `requirements.txt`
 
+## 🐳 Docker Setup
+
+### 1. Build and Run with Docker Compose
+
+1. Copy `env.example` to `.env` and fill in the required values (especially database and secret key).
+2. Build and start the containers:
+
+```bash
+docker-compose up --build
+```
+
+3. Run migrations and create a superuser (in a new terminal):
+
+```bash
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+```
+
+4. Access the API at [http://localhost:8000/](http://localhost:8000/)
+
+---
+
 ## ⚙️ Setup Instructions
 
 ### 1. Environment Setup
